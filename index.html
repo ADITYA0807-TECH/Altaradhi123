@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluminium & Glass Assembling Company</title>
+    <style>
+        /* Modern Aesthetic CSS for AL TARADHI Aluminum & Glass Company */
+
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #143d59;
+            --secondary: #f4b41a;
+            --light: #f5f5f5;
+            --dark: #222831;
+            --gray: #eeeeee;
+            --text: #333;
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a2942 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .header {
+            padding: 0 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header2 {
+            text-align: center;
+        }
+
+        .header2 h1 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .header2 h3 {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .header2 p {
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Intro Section */
+        .intro {
+            background-color: white;
+            padding: 3rem 5%;
+            border-radius: 10px;
+            margin: 2rem 5%;
+            box-shadow: var(--shadow);
+            display: block;
+            text-align: justify;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        /* Image Center */
+        .image-center {
+            height: auto;
+            padding: 2rem 0;
+            background-color: var(--gray);
+            margin: 0 0 2rem 0;
+        }
+
+        .image-center img {
+            max-width: 90%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .image-center img:hover {
+            transform: scale(1.01);
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        #about,
+        #services,
+        #contact {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before,
+        #services::before,
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        /* Lists */
+        ul,
+        ol,
+        .services ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .contact-info p {
+            margin: 0.7rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info strong {
+            color: var(--primary);
+            margin-right: 0.5rem;
+            min-width: 80px;
+        }
+
+        /* Call to Action Button */
+        .cta {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--secondary);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+
+        .cta:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 992px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .intro {
+                margin: 2rem 3%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                padding: 0.8rem 0;
+            }
+
+            nav a {
+                margin: 0 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 1.8rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .header2 h3 {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .intro {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header1" style="display: flex; justify-content: flex-start">
+            <img src="c:\Users\ADITYA\OneDrive\画像\Screenshots\Screenshot 2025-05-08 124627.png" alt="Left Image"
+                style="width: 200px; background-size: cover" />
+        </div>
+        <div class="header2">
+            <h1>AL TARADHI</h1>
+            <h3>Alum. & Glass Cont. L.L.C</h3>
+            <p>Precision. Style. Durability.</p>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="intro">
+        <p>
+            An aluminum fabrication process is any method used to form aluminum into
+            a specific shape. These techniques can involve a wide array of physical
+            and chemical procedures that give aluminum varying physical properties.
+            Aluminum fabrication techniques can be drastically different. Aluminium
+            fabricators use fabricating techniques to construct and assemble
+            products made from aluminium and other metals. Fabrication techniques
+            may include casting, forming, forging and welding. Understanding the
+            role of an aluminium fabricator can help you achieve your goals in the
+            fabrication industry.
+        </p>
+    </div>
+    <div class="image-center">
+        <img src="c:\Users\ADITYA\Downloads\Slim-Frame-Aluminium-Partition-Glass-Window-Sliding-Door.avif"
+         style="width: 800px; height: auto; alt: big image" />
+    </div>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                We specialize in designing, fabricating, and assembling premium
+                aluminium and glass systems for residential, commercial, and
+                industrial applications.
+            </p>
+            <p><strong>Why Choose Us:</strong></p>
+            <ul>
+                <li>Cutting-edge design & engineering</li>
+                <li>High-performance materials</li>
+                <li>Skilled workmanship</li>
+                <li>Timely delivery & installation</li>
+                <li>Customized solutions</li>
+            </ul>
+        </section>
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <li>Aluminium Fabrication & Installation</li>
+            <li>Glass Solutions (Tempered, Decorative, etc.)</li>
+            <li>Facade Systems</li>
+            <li>Interior Partitions & Enclosures</li>
+            <li>Repair & Maintenance</li>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>P.O.Box:</strong> 69074,Sharjah</p>
+                <p>United Arab Emirates</p>
+                <p><strong>Phone:</strong> +971 58 107 8695</p>
+                <p><strong>Tel:</strong> +971 6 537 7005</p>
+                <p><strong>Email:</strong>antonymartin@gmail.com</p>
+                <p><strong>Email:</strong>taradhi.alum@gmail.com</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
